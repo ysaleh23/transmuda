@@ -1,14 +1,13 @@
 @B31G12-146
 Feature: Main modules names verification
 
-
-
+	
 	@B31G12-144
 	Scenario Outline: US111-TC0001 Verify Store and Sales managers see  modules names
 		Given the user logs in with valid credentials "<username>", "<password>"
 		When the user navigates to the main page
 		Then the user should see the following modules:
-			|Dahboards         |
+			|Dashboards         |
 			|Fleet             |
 			|Customers         |
 			|Sales             |
@@ -29,6 +28,6 @@ Feature: Main modules names verification
 		When the user navigates to the main page
 		Then the user should see the following modules:
 			|Fleet     |
-			|Costumers |
+			|Customers |
 			|Activities|
 			|System    |
