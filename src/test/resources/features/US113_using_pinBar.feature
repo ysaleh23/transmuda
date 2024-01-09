@@ -7,13 +7,12 @@ Background:
   Scenario: Clicking the "Learn how to use this space" link
     #Given the user is on the homepage
     When the user clicks the "Learn how to use this space" link
-    Then the user should see "How To Use Pinbar"
-    And User clicks pin icon
+    And the user should see "How To Use Pinbar"
+    Then User clicks pin icon to create a quick link
 
   Scenario: Verifying the image on the page
     #Given the user is on the homepage
-    When the user clicks the "Learn how to use this space" link
-    Then the user should see an image on the page
+   Then verify that users see an image on the page.
     #And the image source should be "/bundles/oronavigation/images/pinbar-location.jpg"
 
 
@@ -25,4 +24,4 @@ Background:
   #“Use the pin icon on the right top corner of page to create fast access link in the pinbar.”
   #Verify
   #AC #2: Verify that users see an image on the page.
-  #(For automation testing, just verify the image source.)
+  #(For automation testing, just verify the image sources.)
