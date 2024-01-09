@@ -12,10 +12,10 @@ public class VehiclesPage {
     }
 
     @FindBy (xpath = "//a[@class='unclickable' and span[contains(text(),'Fleet')]]")
-    WebElement fleet_dropdown;
+    public WebElement fleet_dropdown;
 
     @FindBy (xpath = "//a[@href= 'entity/Extend_Entity_Carreservation' and span[contains(text(),'Vehicles' )]]")
-    WebElement vehicles_page;
+    public WebElement vehicles_page;
 
 
 
