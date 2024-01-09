@@ -1,14 +1,6 @@
 Feature: Default
-
-	#{color:#de350b}{*}User Story{*}: 
-	#{color}
-	#
 	#As a user, I want to type into the Description field when I create a calendar event. (Iframe)
-	#
-	# 
-	#
-	#{color:#de350b}*AC1:*{color} 
-	#Verify that users can type messages in to the Description field on the Calendar Events page{*}.{*}
+	#Verify that users can type messages in to the Description field on the Calendar Events page
 	@B31G12-125
 	Scenario: Verification if Description field when create a calendar event. (Iframe)
 		Feature: Calendar Events - Description Field
