@@ -1,5 +1,5 @@
 @B31G12-137
-Feature: Default
+Feature: Vehicle selection
 
 	Background:
 		Given User hover over Fleet dropdown and selects Vehicles page option
