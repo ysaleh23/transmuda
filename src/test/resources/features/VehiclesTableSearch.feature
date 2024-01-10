@@ -2,6 +2,7 @@
 Feature: Vehicle selection
 
 	Background:
+		Given the user logged in with username as "salesmanager101" and password as "UserUser123"
 		Given User hover over Fleet dropdown and selects Vehicles page option
 
 	@B31G12-134
