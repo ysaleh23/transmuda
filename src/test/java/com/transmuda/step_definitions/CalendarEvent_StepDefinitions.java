@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -36,6 +37,7 @@ public class CalendarEvent_StepDefinitions {
 
     @When("User will click on the Create Calendar Event button")
     public void user_will_click_on_the_create_calendar_event_button() {
+        BrowserUtils.sleep(3);
         eventPage.createCalendarEventButton.click();
     }
 
@@ -76,12 +78,20 @@ public class CalendarEvent_StepDefinitions {
 
     @When("the user navigates to the Description field within the Iframe")
     public void the_user_navigates_to_the_description_field_within_the_iframe() {
+       BrowserUtils.sleep(2);
+       Driver.getDriver().switchTo().frame(eventPage.iFrame);
+       eventPage.textField.click();
+       eventPage.textField.sendKeys("asdasdasd");
+       BrowserUtils.sleep(2);
+
 
 
     }
 
     @When("user types test data text in the Description field.")
     public void user_types_test_data_text_in_the_description_field() {
+
+
 
     }
 
