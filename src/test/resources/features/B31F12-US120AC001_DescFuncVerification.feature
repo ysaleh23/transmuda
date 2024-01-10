@@ -9,8 +9,9 @@ Feature: Default
     Feature: Calendar Events - Description Field
 
   Scenario: User leaves Description field blank for a calendar event (Iframe)
-    #Maksym reusing Yousefs scenario steps and methods in the page definitions
+    #Reusing Yousef's scenario steps and methods in the page definitions
     Given the user logged in with username as "User1" and password as "UserUser123"
+    When User hovers over  the Activities tab.
     When  User will click on the Calendar Events option from dropdown.
     And User will click on the Create Calendar Event button
     #Start Maksym specific steps definitions

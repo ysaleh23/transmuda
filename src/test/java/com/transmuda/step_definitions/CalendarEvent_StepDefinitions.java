@@ -20,7 +20,8 @@ public class CalendarEvent_StepDefinitions {
 
     @Given("User hovers over  the Activities tab.")
     public void user_hovers_over_the_activities_tab() {
-        actions.moveToElement(eventPage.activitiesTab);
+
+        actions.moveToElement(eventPage.activitiesTab).perform();
     }
 
     @When("User will click on the Calendar Events option from dropdown.")
@@ -73,6 +74,8 @@ public class CalendarEvent_StepDefinitions {
 
     @When("the user navigates to the Description field within the Iframe")
     public void the_user_navigates_to_the_description_field_within_the_iframe() {
+
+
 
     }
 
