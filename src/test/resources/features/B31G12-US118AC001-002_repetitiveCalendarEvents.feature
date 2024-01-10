@@ -1,4 +1,4 @@
-@B31G12-132
+
 Feature: User wants to be able to check Calender Event repeat button.
 
 	Background:
