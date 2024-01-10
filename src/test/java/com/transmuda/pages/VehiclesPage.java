@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class VehiclesPage_SA {
+public class VehiclesPage {
 
-    public VehiclesPage_SA(){
+    public VehiclesPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
