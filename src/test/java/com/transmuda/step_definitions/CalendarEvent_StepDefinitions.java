@@ -5,6 +5,7 @@ import com.transmuda.pages.LoginPage;
 import com.transmuda.utilities.BrowserUtils;
 import com.transmuda.utilities.ConfigurationReader;
 import com.transmuda.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -80,23 +81,20 @@ public class CalendarEvent_StepDefinitions {
     public void the_user_navigates_to_the_description_field_within_the_iframe() {
        BrowserUtils.sleep(2);
        Driver.getDriver().switchTo().frame(eventPage.iFrame);
-       eventPage.textField.click();
-       eventPage.textField.sendKeys("asdasdasd");
-       BrowserUtils.sleep(2);
-
-
-
     }
 
-    @When("user types test data text in the Description field.")
-    public void user_types_test_data_text_in_the_description_field() {
+    @And("user types {string} text in the Description field.")
+    public void userTypesTextInTheDescriptionField(String given) {
+        eventPage.textField.click();
+        eventPage.textField.sendKeys(given);
+    }
+    @Then("the {string} in the interface should be the same as {string}.")
+    public void theInTheInterfaceShouldBeTheSameAs(String result, String given) {
 
-
-
+        result = eventPage.textField.getText();
+        Assert.assertEquals(result, given);
     }
 
-    @Then("the text in the interface should be the same as test data.")
-    public void the_text_in_the_interface_should_be_the_same_as_test_data() {
+    // Maksym part finish
 
-    }
 }
