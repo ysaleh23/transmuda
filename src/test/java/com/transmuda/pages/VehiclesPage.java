@@ -5,18 +5,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+import java.util.List;
+
 public class VehiclesPage {
+
     public VehiclesPage(){
         PageFactory.initElements(Driver.getDriver(), this);
-
     }
 
-    @FindBy (xpath = "//a[@class='unclickable' and span[contains(text(),'Fleet')]]")
-    WebElement fleet_dropdown;
+    @FindBy(css = "button.btn.btn-default.btn-small.dropdown-toggle>input")
+    public WebElement selectAllCheckbox;
 
-    @FindBy (xpath = "//a[@href= 'entity/Extend_Entity_Carreservation' and span[contains(text(),'Vehicles' )]]")
-    WebElement vehicles_page;
-
-
+    @FindBy(xpath = "//input[@tabindex='-1'] ")
+    public List<WebElement> checkboxes;
 
 }
