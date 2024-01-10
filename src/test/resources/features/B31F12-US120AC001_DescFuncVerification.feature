@@ -1,5 +1,4 @@
 @wip
-Feature: Default
 	#As a user, I want to type into the Description field when I create a calendar event. (Iframe)
 	#Verify that users can type messages in to the Description field on the Calendar Events page
 
