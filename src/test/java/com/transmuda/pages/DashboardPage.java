@@ -11,9 +11,11 @@ public class DashboardPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//a[@class='unclickable']//span[contains(text(), 'Fleet')]")
+    @FindBy(xpath = "//a[@class='unclickable' and span[contains(text(),'Fleet')]]")
     public WebElement fleetMenu;
 
     @FindBy(xpath = "//span[.='Vehicles']")
     public WebElement vehiclesLink;
+
+
 }
