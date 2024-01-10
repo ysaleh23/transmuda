@@ -15,5 +15,5 @@ Feature: Vehicle selection
 
 	@B31G12-136
 	Scenario: US007 TC003 Verify that users can select any car
-		When the user selects a specific car 
-		 Then that car should be selected
+		When the user selects 3th specific car
+		 Then 3th car should be selected
