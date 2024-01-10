@@ -12,7 +12,7 @@ public class CalenderEventPage {
     }
 
 
-    @FindBy(xpath = "//span[@class='title title-level-1']/i[@class='fa-puzzle-piece menu-icon']")
+    @FindBy(xpath = "//a[@class='unclickable' and span[contains(text(),'Activities')]]")
     public WebElement activitiesTab;
 
     @FindBy(xpath = "//span[.='Calendar Events']")
