@@ -2,9 +2,8 @@ package com.transmuda.step_definitions;
 
 import com.transmuda.pages.DashboardPage;
 import com.transmuda.pages.LoginPage;
-import com.transmuda.pages.VehiclesPage_SA;
+import com.transmuda.pages.VehiclesPage;
 import com.transmuda.utilities.BrowserUtils;
-import com.transmuda.utilities.ConfigurationReader;
 import com.transmuda.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,23 +15,22 @@ import org.openqa.selenium.interactions.Actions;
 public class VehiclesTableStepDefs {
 
     LoginPage login = new LoginPage();
-    VehiclesPage_SA vehiclesPage = new VehiclesPage_SA();
+    VehiclesPage vehiclesPage = new VehiclesPage();
     DashboardPage dashboardPage = new DashboardPage();
     Actions actions;
 
     @Given("User hover over Fleet dropdown and selects Vehicles page option")
     public void user_hover_over_fleet_dropdown_and_selects_vehicles_page_option() {
-        login.login(ConfigurationReader.getProperty("store_manager_username"), ConfigurationReader.getProperty("store_manager_password") );
-        BrowserUtils.waitForVisibility(dashboardPage.fleetMenu,10);
 
+       BrowserUtils.waitForVisibility(dashboardPage.fleetMenu,10);
         actions = new Actions(Driver.getDriver());
-        BrowserUtils.sleep(5);
         actions.moveToElement(dashboardPage.fleetMenu).perform(); //hover overs the fleet menu
+        BrowserUtils.sleep(3);
         actions.moveToElement(dashboardPage.vehiclesLink).click().perform();//clicks on vehicles page
     }
     @Then("user can see all the checkboxes as unchecked")
     public void user_can_see_all_the_checkboxes_as_unchecked() {
-        BrowserUtils.waitForVisibility(vehiclesPage.selectAllCheckbox, 8); //wait until the select all checkbox gets visible
+        BrowserUtils.waitForVisibility(vehiclesPage.selectAllCheckbox, 10); //wait until the select all checkbox gets visible
 
         boolean isChecked = false;
         if(vehiclesPage.selectAllCheckbox.isSelected()){//checks If the select all check boc is checked or not
