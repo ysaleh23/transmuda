@@ -1,9 +1,7 @@
 package com.transmuda.step_definitions;
 
 import com.transmuda.pages.CalenderEventPage;
-import com.transmuda.pages.LoginPage;
 import com.transmuda.utilities.BrowserUtils;
-import com.transmuda.utilities.ConfigurationReader;
 import com.transmuda.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,7 +15,6 @@ import java.time.Duration;
 
 public class CalendarEvent_StepDefinitions {
     CalenderEventPage eventPage = new CalenderEventPage();
-    LoginPage loginPage = new LoginPage();
     Actions actions = new Actions(Driver.getDriver());
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
 
