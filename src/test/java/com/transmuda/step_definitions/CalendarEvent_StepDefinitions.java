@@ -3,6 +3,7 @@ package com.transmuda.step_definitions;
 import com.transmuda.pages.CalenderEventPage;
 import com.transmuda.utilities.BrowserUtils;
 import com.transmuda.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -63,4 +64,26 @@ public class CalendarEvent_StepDefinitions {
         Assert.assertEquals(expectedDisplayedErrorMessage,actualDisplayedErrorMessage);
 
     }
+
+    //Maksym part START
+
+    @When("the user navigates to the Description field within the Iframe")
+    public void the_user_navigates_to_the_description_field_within_the_iframe() {
+        BrowserUtils.sleep(2);
+        Driver.getDriver().switchTo().frame(eventPage.iFrame);
+    }
+
+    @And("user types {string} text in the Description field.")
+    public void userTypesTextInTheDescriptionField(String given) {
+        eventPage.textField.click();
+        eventPage.textField.sendKeys(given);
+    }
+    @Then("the {string} in the interface should be the same as {string}.")
+    public void theInTheInterfaceShouldBeTheSameAs(String result, String given) {
+
+        result = eventPage.textField.getText();
+        Assert.assertEquals(result, given);
+    }
+
+    // Maksym part finish
 }
