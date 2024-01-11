@@ -36,12 +36,6 @@ public class CalenderEventPage {
 //    @FindBy()
 //    public WebElement
 
-    //Maksym additional elements START
-    @FindBy(xpath = "//div[@id='mceu_24']/iframe")
-    public WebElement iFrame;
-
-    @FindBy(xpath = "//body[@id='tinymce']/p")
-    public WebElement textField;
 
 
 }
