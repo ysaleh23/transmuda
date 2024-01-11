@@ -11,19 +11,28 @@ public class RB_MarketingPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-@FindBy(xpath = "(//span[@class='title title-level-1'])[6]")
- public WebElement MarketingDropDown ;
+    @FindBy(xpath = "(//span[@class='title title-level-1'])[6]")
+    public WebElement MarketingDropDown;
 
 
-@FindBy(xpath = "(//span[text()='Campaigns'])[1]")
+    @FindBy(xpath = "(//span[text()='Campaigns'])[1]")
     public WebElement CampaignsButton;
 
 
-@FindBy(xpath = "//select[@data-action='add-filter-select']")
-public WebElement ManageFiltersDropDown;
+    @FindBy(xpath = "//div[@class='filter-container']/select")
+    public WebElement ManageFiltersDropDown;
+
+    @FindBy(xpath = "//div[@class='filter-container']/button")
+    public WebElement ManageFiltersDropDownButton;
 
 
-@FindBy(xpath = "//*[@title='Filters']")
-    public  WebElement FilterButton;
+    @FindBy(xpath = "//*[@title='Filters']")
+    public WebElement FilterButton;
+
+
+    //label[@title='Name']
+    @FindBy(xpath = "//label[@title='Name']")
+    public WebElement manageFilterNameWebElement;
+
 
 }

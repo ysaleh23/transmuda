@@ -59,15 +59,27 @@ public class RB_MarketingPage_StepDefinitions {
 
     @Then("user pres manage filters dropdown menu")
     public void userPresManageFiltersDropdownMenu() {
-        rbMarketingPage.ManageFiltersDropDown.click();
-
-        Select multiSelect = new Select(rbMarketingPage.ManageFiltersDropDown);
-
-        //  multiSelect.selectByValue("code");
-        multiSelect.deselectByValue("code");
-
-
+        rbMarketingPage.ManageFiltersDropDownButton.click();
         BrowserUtils.sleep(2);
+
+       rbMarketingPage.manageFilterNameWebElement.click();
+
+        //Select multiSelect = new Select(rbMarketingPage.ManageFiltersDropDown);
+
+        //multiSelect.deselectByIndex(3);
+
+        //rbMarketingPage.ManageFiltersDropDown.clear();
+        //multiSelect.deselectAll();
+
+        //wait.until(ExpectedConditions.visibilityOf(rbMarketingPage.manageFilterNameWebElement)).click();
+        //BrowserUtils.sleep(2);
+
+
+        //  multiSelect.selectByValue("code")
+
+      //  multiSelect.selectByValue("code");
+
+
     }
 
 
