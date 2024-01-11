@@ -22,16 +22,12 @@ public class VehiclesPage {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
-
-    @FindBy(xpath = "//a[@class='unclickable' and span[contains(text(),'Fleet')]]")
-    public WebElement fleet_dropdown;
-
-
-    @FindBy(xpath = "//a[@href= 'entity/Extend_Entity_Carreservation' and span[contains(text(),'Vehicles' )]]")
-    public WebElement vehicles_page;
-
     @FindBy(xpath = "(//tr[@class='grid-row row-click-action']/td[21])")
     public List<WebElement> listOf_three_dots_webElements;
+
+    @FindBy(xpath = "//ul[@class='nav nav-pills icons-holder launchers-list']/li/a")
+    public List<WebElement> list_of_three_icons;
+
     @FindBy(xpath = "(//div[@class='dropdown open'])")
     public WebElement three_dots_dropdown_isOpen;
 
@@ -44,14 +40,18 @@ public class VehiclesPage {
     @FindBy(xpath = "//label[.='Total of 5 records']")
     public WebElement number_of_rows;
 
-
-
-
-
     public int number_of_record() {
         String string_records = number_of_rows.getText().replaceAll("[^0-9]", "");
         return Integer.parseInt(string_records);
     }
+
+//  *************************************************   SIMA  **********************************************************
+
+    @FindBy(css = "button.btn.btn-default.btn-small.dropdown-toggle>input")
+    public WebElement selectAllCheckbox;
+
+    @FindBy(xpath = "//input[@tabindex='-1'] ")
+    public List<WebElement> checkboxes;
 
 
 }
