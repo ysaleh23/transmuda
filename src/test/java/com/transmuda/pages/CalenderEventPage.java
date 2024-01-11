@@ -15,16 +15,16 @@ public class CalenderEventPage {
     @FindBy(xpath = "//a[@class='unclickable' and span[contains(text(),'Activities')]]")
     public WebElement activitiesTab;
 
-    @FindBy(xpath = "//span[.='Calendar Events']")
+    @FindBy(xpath = "//span[.='Calendar Events']/..")
     public WebElement calendarEventOption;
 
     @FindBy(xpath = "//a[@title='Create Calendar event']")
     public WebElement createCalendarEventButton;
 
-    @FindBy(id = "recurrence-repeat-view264")
+    @FindBy(xpath = "//input[contains(@id, 'recurrence-repeat-view' )]")
     public WebElement repeatButton;
 
-    @FindBy(xpath = "//input[@fdprocessedid='nr9wie']")
+    @FindBy(xpath = "//span[.='day(s)']/../input[3]")
     public WebElement repeatEveryInputBoxWithNumber1;
 
     @FindBy(xpath = "//span[@class='validation-failed']/span[.='This value should not be blank.']")
