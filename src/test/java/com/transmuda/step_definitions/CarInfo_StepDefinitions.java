@@ -6,10 +6,10 @@ import io.cucumber.java.en.When;
 
 public class CarInfo_StepDefinitions {
 
-    @Given("User hover over Fleet dropdown and selects Vehicles page option")
-    public void user_hover_over_fleet_dropdown_and_selects_vehicles_page_option() {
-
-    }
+//    @Given("User hover over Fleet dropdown and selects Vehicles page option")
+//    public void user_hover_over_fleet_dropdown_and_selects_vehicles_page_option() {
+//
+//    }
     @Given("As a user, I want to see edit car info icons from the Vehicles page")
     public void as_a_user_i_want_to_see_edit_car_info_icons_from_the_vehicles_page() {
 
