@@ -13,26 +13,16 @@ public class TransmudaDashBoardPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    //@FindBy(xpath = "//span[@class='title title-level-1']")
-   // public WebElement fleetDropDownOptions;
 
-    @FindBy(xpath ="//thead[@class='grid-header']//th" )
-    public static List<WebElement> vehicleModelColumns;
+    @FindBy(xpath = "//span[.='Vehicles Model']")
+    public  WebElement vehicleModelLink;
 
 
 
+    @FindBy(xpath = "//a[@class='unclickable' and span[contains(text(),'Fleet')]]")
+    public WebElement fleetDropDownOptions;
 
 
 
-    @FindBy(id="prependedInput")
-    public WebElement userNames;
-
-
-
-    @FindBy(id="prependedInput2")
-    public WebElement passwords;
-
-    @FindBy(name = "_submit")
-    public WebElement submits;
 
 }
