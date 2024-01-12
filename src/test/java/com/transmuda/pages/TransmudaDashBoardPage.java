@@ -22,7 +22,8 @@ public class TransmudaDashBoardPage {
     @FindBy(xpath = "//a[@class='unclickable' and span[contains(text(),'Fleet')]]")
     public WebElement fleetDropDownOptions;
 
-
+    @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
+    public WebElement driversErrorMessage;
 
 
 }
