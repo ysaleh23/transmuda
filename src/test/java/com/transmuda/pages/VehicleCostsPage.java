@@ -28,4 +28,10 @@ public VehicleCostsPage(){
     @FindBy(xpath = "/html/body/div[2]/div[2]/div[1]/div[2]/div[3]/div[3]/div[2]/div[2]/div[2]/div/table/thead[1]/tr/th[2]/a")
     public WebElement type;
 
+
+    @FindBy(xpath = "//button[@class='btn btn-default btn-small dropdown-toggle']//input[@type='checkbox']")
+    public WebElement selectAllCheckbox;
+
+    @FindBy (xpath = "//input[@tabindex='-1']")
+    public List<WebElement> checkboxes;
 }
