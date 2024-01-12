@@ -15,7 +15,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/transmuda/step_definitions",
         dryRun = false,
+
         tags = "@B31G12-140",
+
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
