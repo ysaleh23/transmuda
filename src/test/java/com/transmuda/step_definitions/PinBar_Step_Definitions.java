@@ -55,7 +55,7 @@ public class PinBar_Step_Definitions {
 
     @And("verify that users see an image on the page.")
     public void verify_that_users_see_an_image_on_the_page() {
-
+        BrowserUtils.sleep(2);
         Assert.assertTrue("Its not displayed", pinbar.imageWebElement.isDisplayed());
 /*                try {
                         String expectedImage = pinbar.usePinIcon.getAttribute("p");
