@@ -35,4 +35,11 @@ public class RB_MarketingPage {
     public WebElement manageFilterNameWebElement;
 
 
+
+    @FindBy(xpath = "//label[@title='Code']")
+    public WebElement manageFilterCode ;
+
+    @FindBy(xpath = "//label[@title='Start Date']")
+    public WebElement manageFilterStartDate;
+
 }
