@@ -13,19 +13,13 @@ public class VehicleModelPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//span[.='Vehicles Model']")
-    public  WebElement vehicleModelLink;
 
 
 
-   @FindBy(xpath = "//a[@class='unclickable' and span[contains(text(),'Fleet')]]")
-        public WebElement fleetDropDownOptions;
+        //tr[@class='grid-header-row']//th
 
-    @FindBy(xpath ="//thead[@class='grid-header']//th" )
-    public static List<WebElement> vehicleModelColumns;
-
-
-
+    @FindBy(xpath ="//thead[@class='grid-header']//a[@class='grid-header-cell__link']" )
+    public  List<WebElement> vehicleModelColumns;
 
 
 
