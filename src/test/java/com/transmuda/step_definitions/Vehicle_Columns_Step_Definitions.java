@@ -51,6 +51,15 @@ public class Vehicle_Columns_Step_Definitions {
 
     }
 
+    @Then(": User should see the following error message “You do not have permission to perform this action.”")
+    public void user_should_see_the_following_error_message_you_do_not_have_permission_to_perform_this_action() {
+
+        String expectedErrorMessage = "You do not have permission to perform this action.";
+        String actualErrorMessage = transmudaDashBoardPage.driversErrorMessage.getText();
+
+        Assert.assertEquals(expectedErrorMessage,actualErrorMessage);
+
+    }
 
 
 }
