@@ -5,13 +5,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
-    public HomePage(){
+import java.util.List;
+
+public class TransmudaDashBoardPage {
+
+    public TransmudaDashBoardPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(id = "user_count")
-    public WebElement userAmount;
+    //@FindBy(xpath = "//span[@class='title title-level-1']")
+   // public WebElement fleetDropDownOptions;
+
+    @FindBy(xpath ="//thead[@class='grid-header']//th" )
+    public static List<WebElement> vehicleModelColumns;
+
+
+
+
 
 
     @FindBy(id="prependedInput")
@@ -24,4 +34,5 @@ public class HomePage {
 
     @FindBy(name = "_submit")
     public WebElement submits;
+
 }
