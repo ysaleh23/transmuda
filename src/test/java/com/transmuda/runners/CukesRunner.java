@@ -16,7 +16,8 @@ import org.junit.runner.RunWith;
         glue = "com/transmuda/step_definitions",
         dryRun = false,
 
-        tags = "@B31G12-148",
+        tags = "@B31G12-129",
+
 
         publish = true //generating a report with public link
 )
