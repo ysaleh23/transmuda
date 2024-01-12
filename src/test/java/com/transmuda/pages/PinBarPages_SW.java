@@ -24,4 +24,7 @@ public class PinBarPages_SW {
     @FindBy(xpath = "//h3[.='How To Use Pinbar']")
     public WebElement howToUsePinBar;
 
+    @FindBy(xpath = "//img[@src='/bundles/oronavigation/images/pinbar-location.jpg']")
+    public WebElement imageWebElement;
+
 }

@@ -56,7 +56,9 @@ public class PinBar_Step_Definitions {
 
         @And("verify that users see an image on the page.")
         public void verify_that_users_see_an_image_on_the_page() {
-                try {
+
+                Assert.assertTrue("Its not displayed", pinbar.imageWebElement.isDisplayed());
+/*                try {
                         String expectedImage = pinbar.usePinIcon.getAttribute("p");
                         WebElement actualImageElement = Driver.getDriver().findElement(By.xpath("//div[@class='clearfix']//p[1]"));
                         String actualImage = actualImageElement.getAttribute("p");
@@ -65,7 +67,7 @@ public class PinBar_Step_Definitions {
                 } catch (Exception e) {
                         // Handle the exception or log it
                         e.printStackTrace();
-                }
+                }*/
         }
 
 
