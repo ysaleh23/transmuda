@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -31,12 +32,12 @@ public class CalendarEvent_StepDefinitions {
     public void user_will_click_on_the_calendar_events_option_from_dropdown() {
         wait.until(ExpectedConditions.visibilityOf(eventPage.calendarEventOption)).click();
 
-
     }
     @When("User will click on the Create Calendar Event button")
     public void user_will_click_on_the_create_calendar_event_button() {
-        wait.until(ExpectedConditions.elementToBeClickable(eventPage.createCalendarEventButton)).click();
-
+        wait.until(ExpectedConditions.elementToBeClickable(eventPage.createCalendarEventButton));
+        BrowserUtils.sleep(4);
+        eventPage.createCalendarEventButton.click();
     }
     @When("User will click on the repeat button")
     public void user_will_click_on_the_repeat_button() {
@@ -92,4 +93,31 @@ public class CalendarEvent_StepDefinitions {
 
     // Maksym part finish
 
+    // Basim part start
+
+    @When("User enter less than {int}")
+    public void user_enter_less_than(Integer int1) {
+        BrowserUtils.sleep(2);
+        eventPage.repeatEveryInputBoxWithNumber1.clear();
+        eventPage.repeatEveryInputBoxWithNumber1.sendKeys("0" + Keys.ENTER);
+    }
+    @When("users should see {string}")
+    public void users_should_see(String expectedErrorMessage) {
+        BrowserUtils.sleep(2);
+        String actualErrorMessage = eventPage.errorMessage.getText();
+        BrowserUtils.sleep(2);
+        Assert.assertEquals(expectedErrorMessage,actualErrorMessage);
+    }
+    @When("user will clear the previous inputted value")
+    public void user_will_clear_the_previous_inputted_value() {
+        BrowserUtils.sleep(2);
+        eventPage.repeatEveryInputBoxWithNumber1.clear();
+    }
+    @When("if User enter more than {int}")
+    public void if_user_enter_more_than(Integer int1) {
+        BrowserUtils.sleep(2);
+        eventPage.repeatEveryInputBoxWithNumber1.clear();
+        eventPage.repeatEveryInputBoxWithNumber1.sendKeys("110" + Keys.ENTER);
+    }
+    //Basim part finish's
 }
