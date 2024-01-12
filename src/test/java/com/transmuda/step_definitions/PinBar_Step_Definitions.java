@@ -51,7 +51,7 @@ public class PinBar_Step_Definitions {
     //this.driver = Driver.getDriver();
     // WebElement howToUsePinBar = driver.findElement(By.cssSelector(("a[href=\"/pinbar/help\"]")));
     //System.out.println("How to Use PinBar " + pinbar.howToUsePinBar.isDisplayed());
-
+//done
 
     @And("verify that users see an image on the page.")
     public void verify_that_users_see_an_image_on_the_page() {
