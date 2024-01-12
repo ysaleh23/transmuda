@@ -13,7 +13,7 @@ public class VehicleModelPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//a[@href='/entity/Extend_Entity_VehiclesModel'] ")
+    @FindBy(xpath = "//span[.='Vehicles Model']")
     public  WebElement vehicleModelLink;
 
 
