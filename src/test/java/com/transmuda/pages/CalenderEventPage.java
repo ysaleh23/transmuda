@@ -30,11 +30,14 @@ public class CalenderEventPage {
     @FindBy(xpath = "//span[@class='validation-failed']/span[.='This value should not be blank.']")
     public WebElement thisValueShouldNotBeBlankErrorMessage;
 
-//    @FindBy()
-//    public WebElement
-//
-//    @FindBy()
-//    public WebElement
+
+    //Basim WebElement Locators Start
+
+
+
+   @FindBy(xpath = "//span[@id='temp-validation-name-1064-error']")
+   public WebElement errorMessage;
+    //Basim WebElement Locators Finish
 
 
     //Maksym additional elements START
@@ -43,6 +46,7 @@ public class CalenderEventPage {
 
     @FindBy(xpath = "//body[@id='tinymce']/p")
     public WebElement textField;
+
 
 
 
