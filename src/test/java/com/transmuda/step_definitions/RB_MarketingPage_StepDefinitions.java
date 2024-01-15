@@ -34,10 +34,6 @@ public class RB_MarketingPage_StepDefinitions {
         actions.moveToElement(rbMarketingPage.MarketingDropDown).perform();
         wait.until(ExpectedConditions.visibilityOf(rbMarketingPage.CampaignsButton)).click();
 
-//        rbMarketingPage.MarketingDropDown.click();
-//        BrowserUtils.sleep(3);
-//        rbMarketingPage.CampaignsButton.click();
-//        BrowserUtils.sleep(3);
 
     }
 
@@ -47,14 +43,7 @@ public class RB_MarketingPage_StepDefinitions {
         BrowserUtils.sleep(3);
     }
 
-//    @Given("user is on Manage filters dropdown page")
-//    public void userIsOnManageFiltersDropdownPage() {
-//        //   rbMarketingPage.ManageFiltersDropDown.click();
-//        Select multiSelect = new Select(rbMarketingPage.ManageFiltersDropDown);
-//        System.out.println("multiSelect.isMultiple() = " + multiSelect.isMultiple());
-//        BrowserUtils.sleep(2);
-//
-//    }
+
 
 
     @Then("user pres manage filters dropdown menu")
@@ -63,23 +52,16 @@ public class RB_MarketingPage_StepDefinitions {
         BrowserUtils.sleep(2);
 
        rbMarketingPage.manageFilterNameWebElement.click();
+        BrowserUtils.sleep(2);
 
-        //Select multiSelect = new Select(rbMarketingPage.ManageFiltersDropDown);
+rbMarketingPage.manageFilterCode.click();
+        BrowserUtils.sleep(2);
 
-        //multiSelect.deselectByIndex(3);
-
-        //rbMarketingPage.ManageFiltersDropDown.clear();
-        //multiSelect.deselectAll();
-
-        //wait.until(ExpectedConditions.visibilityOf(rbMarketingPage.manageFilterNameWebElement)).click();
-        //BrowserUtils.sleep(2);
+rbMarketingPage.manageFilterStartDate.click();
 
 
-        //  multiSelect.selectByValue("code")
 
-      //  multiSelect.selectByValue("code");
-
-
+        BrowserUtils.sleep(2);
     }
 
 
