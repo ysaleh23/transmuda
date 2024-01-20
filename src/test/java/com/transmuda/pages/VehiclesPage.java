@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class VehiclesPage {
-    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+    public WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
     public VehiclesPage() {
         PageFactory.initElements(Driver.getDriver(), this);
