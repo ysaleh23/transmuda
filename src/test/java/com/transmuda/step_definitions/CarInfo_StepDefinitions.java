@@ -24,11 +24,10 @@ public class CarInfo_StepDefinitions {
 
 
     VehiclesPage vehiclesPage = new VehiclesPage();
-    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+
     Actions actions = new Actions(Driver.getDriver());
     List<WebElement> actual_three_dots_webElements = new ArrayList<>();
     List<WebElement> actual_three_dots_icons_webElements = new TreeList();
-    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
 
     @When("user hover the mouse over the three dots ...")
@@ -43,7 +42,7 @@ public class CarInfo_StepDefinitions {
         for (int i = 0; i < actual_three_dots_webElements.size(); i++) {
             for (int j = 0; j < actual_three_dots_icons_webElements.size(); j++) {
                 actions.moveToElement(actual_three_dots_webElements.get(i)).click().perform();
-                wait.until(ExpectedConditions.visibilityOf(actual_three_dots_icons_webElements.get(i)));
+                BrowserUtils.waitForVisibility(actual_three_dots_icons_webElements.get(i), 10);
                 Assert.assertTrue(actual_three_dots_icons_webElements.get(i).isDisplayed());
             }
         }
